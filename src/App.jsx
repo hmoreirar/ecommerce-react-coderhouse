@@ -2,9 +2,9 @@ import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router";
-import { CartProvider } from "./context/CartContext";
+import { CartProvider } from "./context/cartContext";
 import CartContainer from "./components/CartContainer";
-import app, { exportProductsData, getProducts } from "./data/firebase";
+import app, { getProducts } from "./data/firebase";
 
 export default function App() {
   console.log(app);
