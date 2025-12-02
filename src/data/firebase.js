@@ -16,12 +16,12 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyANLBEUY8DNeAU7BxHR3rAIs7iYJWIN6Xs",
+  apiKey: import.meta.env.VITE_FS_APIKEY,
   authDomain: "react-coderhouse-9d2ca.firebaseapp.com",
-  projectId: "react-coderhouse-9d2ca",
+  projectId: import.meta.env.VITE_FS_PROJECT_ID,
   storageBucket: "react-coderhouse-9d2ca.firebasestorage.app",
   messagingSenderId: "170851079124",
-  appId: "1:170851079124:web:bbd21486f834cd0bbe3c41",
+  appId: import.meta.env.VITE_FS_APP_ID,
 };
 
 // Initialize Firebase
