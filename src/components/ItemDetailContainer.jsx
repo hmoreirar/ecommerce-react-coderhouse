@@ -3,7 +3,7 @@ import ButtonAddToCart from "./ButtonAddToCart";
 import { getProductById } from "../data/firebase";
 import { useParams } from "react-router";
 import { useEffect, useState, useContext } from "react";
-import cartContext from "../context/CartContext";
+import cartContext from "../context/cartContext";
 
 function ItemDetailContainer() {
   const { idParam } = useParams();
