@@ -1,21 +1,30 @@
 import Item from "./Item";
-import getMockAPIData from "../data/mockAPI";
+import { getProducts, getProductsByCateg } from "../data/firebase";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router";
 
 export default function ItemListContainer({ mensaje }) {
   const [products, setProducts] = useState([]);
+  const { categParam } = useParams();
+
   useEffect(() => {
-    getMockAPIData()
-      .then((productList) => {
-        setProducts(productList);
-      })
-      .catch((error) => {
-        alert("Error al cargar los productos", error);
-      })
-      .finally(() => {
-        console.log("Proceso de carga finalizado");
+    if (categParam) {
+      getProductsByCateg(categParam).then((productsByCateg) => {
+        setProducts(productsByCateg);
       });
-  }, []);
+    } else {
+      getProducts()
+        .then((productList) => {
+          setProducts(productList);
+        })
+        .catch((error) => {
+          alert("Error al cargar los productos", error);
+        })
+        .finally(() => {
+          console.log("Proceso de carga finalizado");
+        });
+    }
+  }, [categParam]);
 
   return (
     <main className="container py-4">
@@ -33,7 +42,7 @@ export default function ItemListContainer({ mensaje }) {
         }}
       >
         {products.map((item) => (
-          <Item {...item} />
+          <Item key={item.id} {...item} />
         ))}
       </div>
     </main>

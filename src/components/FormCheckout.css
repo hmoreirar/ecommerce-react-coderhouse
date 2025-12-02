@@ -1,0 +1,78 @@
+.checkout-container {
+  max-width: 520px;
+  margin: 18px auto;
+  padding: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+}
+
+.checkout-title {
+  margin: 0 0 12px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #0f172a;
+  text-align: left;
+}
+
+.checkout-form {
+  display: grid;
+  gap: 12px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #213547;
+}
+
+.form-input {
+  margin-top: 6px;
+  padding: 10px 12px;
+  border: 1px solid #d6e3ef;
+  border-radius: 8px;
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.form-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.08);
+}
+
+.btn-submit {
+  margin-top: 8px;
+  align-self: start;
+  padding: 10px 18px;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.08s ease, box-shadow 0.12s ease;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.18);
+}
+
+@media (max-width: 480px) {
+  .checkout-container {
+    padding: 14px;
+    margin: 12px;
+  }
+
+  .btn-submit {
+    width: 100%;
+    text-align: center;
+  }
+}

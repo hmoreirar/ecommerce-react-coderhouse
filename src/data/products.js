@@ -11,7 +11,7 @@ const products = [
   {
     id: 2,
     title: "Guitarra Acústica Folk",
-    img: "https://musichall.cl/wp-content/uploads/2025/06/f370_1-05429584-2502-4d42-9fff-59c237c31c0e.jpg",
+    img: "https://cdnx.jumpseller.com/gorila-music/image/64367546/resize/1079/1079?1749506335",
     description: "Guitarra acústica de madera natural con cuerdas de acero.",
     price: 129990,
     stock: 12,

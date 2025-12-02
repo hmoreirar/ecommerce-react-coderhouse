@@ -2,7 +2,8 @@ import { Button } from "bootstrap";
 import "./Item.css";
 import ButtonAddToCart from "./ButtonAddToCart";
 import StateComponent from "./StateComponent";
-function Item({ title, img, price }) {
+import { Link } from "react-router";
+function Item({ id, title, img, price }) {
   return (
     <div className="item-card">
       <h2 className="item-card-title">{title}</h2>
@@ -10,7 +11,10 @@ function Item({ title, img, price }) {
       <p className="item-card-price">Precio: ${price}</p>
       <StateComponent />
       <br />
-      <ButtonAddToCart />
+      <Link to={`/detalle/${id}`}>
+        <button className="btn btn-primary">Ir a Detalle</button>
+      </Link>
+      <br />
     </div>
   );
 }
